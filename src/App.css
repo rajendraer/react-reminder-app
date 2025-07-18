@@ -1,0 +1,104 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark input,
+body.dark button {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+body.dark .reminder {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+}
+
+/* App container */
+.App {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Filters and search */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* Inputs and buttons */
+input,
+button,
+select {
+  font-size: 1rem;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Reminder list */
+.reminder-list .reminder {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Dark mode override for reminder box */
+body.dark .reminder-list .reminder {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+/* Responsive styles */
+@media (min-width: 600px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .filters {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .filters input {
+    flex: 1;
+    margin-right: 0.5rem;
+  }
+}
